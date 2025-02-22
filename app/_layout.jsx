@@ -42,10 +42,6 @@ const RootLayout = () => {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-        <Stack.Screen name="contract_admin" options={{ headerShown: false }} />
-        <Stack.Screen name="contract_adminspage1" options={{ headerShown: false }} />
-        <Stack.Screen name="contract_adminspage2" options={{ headerShown: false }} />
-
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
       </Stack>
