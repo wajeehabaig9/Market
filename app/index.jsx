@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import ChartComponent from "./ChartComponent";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import Svg, { Polygon } from "react-native-svg";
 const Welcome = () => {
 
   // State management
@@ -83,12 +84,46 @@ const Welcome = () => {
 <View className="flex flex-row items-center gap-2">
   <Text className="text-[8px] text-black font-regular">Save</Text>
 <Image
-            className="w-[15px] h-[15px] rounded-md mb-1 mt-1"
+            className="w-[18px] h-[18px] rounded-md mb-1 mt-1"
             source={{ uri: "https://res.cloudinary.com/dzngpgki4/image/upload/v1740520403/Import_kg8eyz.png" }}
           />
 </View>
   </View>
-            <ChartComponent/>
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} className="-mt-1">
+                        {/* Button Container */}
+                        <View
+                            style={{
+                                position: 'relative',
+                                backgroundColor: '#114918',
+                                width: 100,
+                                height: 20,
+                                marginLeft: 170,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                borderRadius: 5,
+                                marginBottom: 30,  // Increased bottom margin to provide spacing between the button and chart
+                            }}
+                        >
+                            <Text style={{ color: 'white', fontSize: 8, fontWeight: 'bold' }}>27,680</Text>
+                            <Svg
+                                height="15"
+                                width="25"
+                                style={{
+                                    position: 'absolute',
+                                    bottom: -15,
+                                    left: '50%',
+                                    transform: [{ translateX: -12.5 }],
+                                }}
+                            >
+                                <Polygon points="0,0 12.5,15 25,0" fill="#114918" />
+                            </Svg>
+                        </View>
+
+                        {/* Chart Component Container */}
+                        <View style={{ width: '100%', height: 220 }} className="-mt-4">
+                            <ChartComponent style={{ flex: 1, height: '100%' }} />
+                        </View>
+                    </View>
           </View>
       </ScrollView>
     </SafeAreaView>

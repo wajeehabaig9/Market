@@ -119,7 +119,7 @@ const ChartComponent = () => {
     `;
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} >
             <View style={styles.chartContainer}>
                 <View style={{ width: '100%', height: 300 }}>
                     <WebView
